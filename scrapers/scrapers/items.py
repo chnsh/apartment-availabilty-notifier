@@ -17,3 +17,4 @@ class Apartment(scrapy.Item):
     has_view = scrapy.Field()
     floor = scrapy.Field()
     num_beds = scrapy.Field()
+    description = scrapy.Field()

@@ -17,7 +17,8 @@ class CityViewPipeline(object):
                           data=json.dumps(
                               {
                                   "text": "Apartment available at city view",
-                                  "flockml": "Apartment available at City view from <strong>{}</strong>, costing ${}, floor {}, sq ft {}".format(
-                                      item['date'].isoformat(), item['price'], item['floor'], item['sqft'])
+                                  "flockml": "Apartment available at City view from <strong>{}</strong>, costing ${}, floor {}, sq ft {} \n <strong>Description:</strong> \n {}".format(
+                                      item['date'].isoformat(), item['price'], item['floor'], item['sqft'],
+                                      item['description'])
                               }))
             return item
